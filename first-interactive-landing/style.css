@@ -1,0 +1,228 @@
+body {
+    background-color: #100922;
+    color: #eeedf2;
+    margin: 0;
+    font-family: 'Geologica', sans-serif;
+}
+
+::selection {
+    background-color: rgb(165, 3, 165);
+    color: rgb(212, 212, 212);
+}
+
+.logo {
+    width: 80px;
+}
+
+@keyframes header-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    animation: header-appear 0.4s ease-out forwards;
+}
+
+.main-content {
+    position: relative;
+    max-width: 1200px;
+    min-height: 80vh;
+    margin: 0 auto;
+}
+
+.section-hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    margin-top: 80px;
+}
+
+.card-wrapper {
+    width: 400px;
+    height: 250px;
+    z-index: 2;
+    transform: rotate(8deg);
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: -1;
+    box-sizing: border-box  ;
+    background-color: rgba(175, 19, 186, 0.25);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px white;
+    backdrop-filter: blur(10px);
+    transition: 0.1s;
+}
+
+.navigation {
+    gap: 30px;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    position: relative;
+}
+
+.header-links {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #eeedf2;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(-40px)
+    } 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heading {
+    font-size: 80px;
+    line-height: 1;
+    margin-bottom: 40px;
+    animation: appear 1s ease-out both;
+    animation-delay: 0.4s;
+}
+
+.description {
+    font-size: 20px;
+    color: rgb(204, 202, 202);
+    animation: appear 1s ease-out both;
+    animation-delay: 0.7s;
+}
+
+.explore-btn {
+    width: 200px;
+    height: 60px;
+    background-color: rgb(218, 147, 206);
+    border: none;
+    border-radius: 5px;
+    font-family: 'Geologica', sans-serif;
+    font-size: 22px;
+    margin: 0;
+    animation: appear 1s ease-out both;
+    animation-delay: 1s;
+}
+
+.explore-btn:active {
+    background-color: rgb(214, 103, 196);
+}
+
+@keyframes scene-appear {
+    from {
+        transform: rotateZ(-8deg) translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: rotateZ(0) translate(0);
+        opacity: 1;
+    }
+}
+
+.scene {
+    position: relative;
+    display: flex;
+    align-items: center;
+    animation: scene-appear 1s ease-out both;
+    animation-delay: 1.2s;
+}
+
+.card-heading {
+    margin: 30px;
+}
+
+.card-description {
+    margin: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@keyframes glow-appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+.glow-first { 
+    position: fixed;
+    z-index: -1;
+    width: 1600px;
+    height: 500px;
+    bottom: -100px;
+    right: -400px;
+    background-image: radial-gradient(circle farthest-corner at 50% 50%, #7e466b, rgba(248, 140, 212, 0) 69%);
+    filter: blur(80px);
+    opacity: 0.8;
+    animation: glow-appear 1s ease-in forwards;
+}
+
+.glow-second {
+    position: fixed;
+    z-index: -1;
+    width: 500px;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 50% 50%, #49258b, rgba(248, 140, 212, 0) 69%);
+    right: 0;
+    top: 50px;
+    filter: blur(80px);
+    opacity: 0.8;
+    animation: glow-appear 1s ease-in forwards;
+}
+
+@keyframes decor-animation{
+    from {
+        color: rgb(241, 241, 78);
+        transform: translateY(0) rotateZ(25deg); 
+    }
+    to {
+        color: rgb(230, 236, 199);
+        transform: translateY(-5px) rotateZ(25deg);
+    }
+}
+
+.decor-star {
+    position: absolute;
+    font-size: 100px;
+    z-index: 2;
+    top: 12px;
+    right: -60px;
+    transform: rotateZ(25deg);
+    margin: 0;
+    color: rgb(255, 255, 153);
+    pointer-events: none;
+    animation: decor-animation 1s ease-in-out infinite alternate;
+}
+
+.link-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: purple;
+    transition: 0.2s;
+}
